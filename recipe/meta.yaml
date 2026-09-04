@@ -24,6 +24,7 @@ about:
   home: https://developer.nvidia.com/cuda-toolkit
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  license_family: Other
   license_url: https://docs.nvidia.com/cuda/eula/index.html
   summary: Meta-package containing all NVIDIA cuSOLVERMp packages, not intended for use in a conda-build context.
   description: |
@@ -33,6 +34,8 @@ about:
   dev_url: https://developer.nvidia.com/cuda-toolkit
 
 extra:
+  skip-lints:
+    - deprecate_license_url
   recipe-maintainers:
     - mrogowski
     - conda-forge/cuda
