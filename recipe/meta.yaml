@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  noarch: generic
+  skip: true # [win or osx]
 
 requirements:
   run:
@@ -24,14 +24,18 @@ about:
   home: https://developer.nvidia.com/cuda-toolkit
   license_file: LICENSE.txt
   license: LicenseRef-NVIDIA-End-User-License-Agreement
+  license_family: Other
   license_url: https://docs.nvidia.com/cuda/eula/index.html
   summary: Meta-package containing all NVIDIA cuSOLVERMp packages, not intended for use in a conda-build context.
   description: |
     NVIDIA cuSOLVERMp is a high-performance, distributed-memory, GPU-accelerated library that provides tools for the solution of dense linear systems and eigenvalue problems.
     cuSOLVERMp is compatible with 2D block-cyclic data layout and provides ScaLAPACK-like C APIs.
   doc_url: https://docs.nvidia.com/cuda/index.html
+  dev_url: https://developer.nvidia.com/cuda-toolkit
 
 extra:
+  skip-lints:
+    - deprecate_license_url
   recipe-maintainers:
     - mrogowski
     - conda-forge/cuda
